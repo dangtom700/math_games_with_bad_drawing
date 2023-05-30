@@ -17,6 +17,21 @@ def forecast_tax_collector(remaining_number_list: list, number_pick: int):
         index += 1
     return False
 
+def tax_collector_turn(remaining_number_list: list, player_number: int):
+    total_collect = 0
+    index = 0
+
+    while index < len(remaining_number_list):
+        remaining_number = remaining_number_list[index]
+        if player_number % remaining_number == 0:
+            if player_number > remaining_number:
+                total_collect += remaining_number
+                index -= 1
+            remaining_number_list.remove(remaining_number)
+        index += 1
+
+    return total_collect
+
 ceiling_number = 15
 iterate_list = lambda n: [i for i in range(1, n+1)]
 num_list = iterate_list(ceiling_number)
@@ -35,6 +50,10 @@ while Is_continue_game == True:
         back_track_index -= 1
         choosen_number = num_list[len(num_list)+back_track_index]
         Is_tax_collector_happy = forecast_tax_collector(num_list, choosen_number)
+
+    player_sum += choosen_number
+    total_collect_this_round = tax_collector_turn(num_list, choosen_number)
+    tax_collector_sum += total_collect_this_round
 
 
 if tax_collector_sum >= player_sum:
