@@ -45,7 +45,7 @@ I want to say that even though I don't have any love or interest in pure mathema
 **Number Games**
 |[ ]|[ ]|[ ]|[ ]|[ ]|[ ]|
 |---|---|---|---|---|---|
-|[ ]|[ ]|[ ]|[ ]|[ ]|[X]|
+|[ ]|[ ]|[ ]|[ ]|[X]|[X]|
 
 **Combination Games**
 |[ ]|[ ]|[ ]|[ ]|[ ]|
